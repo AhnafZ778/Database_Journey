@@ -14,12 +14,12 @@ sql_table = """Create table if not exists patients(
 connect.execute(sql_table)
 while True:
     print("Do you want to register an appointment?")
-    a = int(input("1.Yes 2. No\n-->  "))
+    a = int(input("1.Yes 2. No\n--> "))
     if a == 1:
-        name = input("Name of patient?\n-->  ")
-        disease = input("Please state the reason for your visit?\n-->  ")
+        name = input("Name of patient?\n--> ")
+        disease = input("Please state the reason for your visit?\n--> ")
         age = int(input("What is the age of the patient?\n-->  "))
-        print("Please wait while we register you into the registry\n-->  ")
+        print("Please wait while we register you into the registry\n--> ")
         print("Wait..", end = "")
         for i in range(5):
             print(".", end = "")
@@ -28,6 +28,7 @@ while True:
         connect.execute(sql)
         print("\nPatient has been successfully registered")
     elif a == 2:
+        print("Thank you for visiting PL Hospital")
         break
     else:
         print("Please input a valid response")
